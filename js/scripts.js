@@ -13,17 +13,22 @@ function hideMainContent() {
 }
 
 function displayHomePage() {
-    if (pageNum != 1) {
-        mainContentBoxElement.style.animationName = 'goingUp';
-        mainContentBoxElement.style.animationDuration = '0.5s';
-        mainContentBoxElement.addEventListener("animationend", () => {
-            hideMainContent()
-            homeElement.style.display = "block";
-            
-            mainContentBoxElement.style.animationName = 'goingDown';
-        });
-        pageNum = 1;
+    if (window.innerWidth > 768) {
+        if (pageNum != 1) {
+            mainContentBoxElement.style.animationName = 'goingUp';
+            mainContentBoxElement.style.animationDuration = '0.5s';
+            mainContentBoxElement.addEventListener("animationend", () => {
+                hideMainContent()
+                homeElement.style.display = "block";
+                
+                mainContentBoxElement.style.animationName = 'goingDown';
+            });
+        }
+    } else {
+        hideMainContent();
+        homeElement.style.display = "block";
     }
+    pageNum = 1;
 }
 
 function displayProjectsPage() {
