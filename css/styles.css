@@ -20,9 +20,10 @@ div {
 }
 
 h1 {
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 'Cooper Black', 'Times New Roman', Times, serif;
 	text-align: center;
 	text-shadow: 10px 10px black;
+	color: #6a9955;
 }
 
 h2 {
@@ -58,6 +59,12 @@ a:active {
 	text-shadow: 2px 2px black;
 	height: 80%;
 	width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
